@@ -1,0 +1,626 @@
+// custom shadow header and sidebar
+$layoutsize: 240px !important;
+$layoutsize2: 75px !important;
+$layoutsize3: 0 !important;
+
+.q-header-info__dropdawn__inside {
+  .q-list {
+    .q-item {
+      display: flex;
+      align-items: center;
+      padding: 16px 20.67px;
+      min-height: 44px;
+      .q-icon,
+      .q-item__label {
+        color: $grey;
+      }
+      .q-item__label {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        margin-left: 16.67px;
+      }
+      &.q-header-info__dropdawn-user {
+        display: none;
+      }
+    }
+    .q-header-info-item-languige {
+      display: block;
+      padding: 0;
+      .q-expansion-item__toggle-icon {
+        color: $primary;
+        font-size: 24px;
+      }
+      .q-item__section--avatar {
+        min-width: auto;
+        padding-right: 0;
+      }
+      .q-header-info-item__languige {
+        .q-list {
+          width: 100%;
+          .q-item {
+            padding-left: 62px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1100px) {
+    .q-list {
+      .q-item {
+        &.q-header-info__dropdawn-user {
+          display: flex;
+        }
+      }
+    }
+  }
+}
+.main-layout {
+  .main-layout__title {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 130%;
+    letter-spacing: 0.03em;
+    color: $dark;
+    margin-left: 11.6px;
+  }
+  .q-header {
+    left: $layoutsize;
+    display: flex;
+    .logo {
+      display: none;
+    }
+    .q-toolbar {
+      padding: 0 28.4px;
+      min-height: 72px;
+    }
+    .q-header-info {
+      display: flex;
+      align-items: center;
+      .q-item {
+        flex-wrap: nowrap;
+        min-width: max-content;
+        align-items: center;
+        min-height: 44px;
+        .q-item__label {
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 20px;
+          margin-left: 12px;
+        }
+        .q-item__label,
+        .q-icon {
+          color: $grey;
+          transition: all 0.3s;
+        }
+        &:hover {
+          .q-item__label,
+          .q-icon {
+            color: $dark;
+          }
+        }
+      }
+      .q-header-info__manager {
+        background: #F3F4F6;
+        border-radius: 4px;
+        margin-right: 45px;
+        min-height: 40px;
+        .block {
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 20px;
+        }
+        .q-icon,
+        .block {
+          color: $grey;
+          transition: all 0.3s;
+        }
+        &:hover {
+          .q-icon,
+          .block {
+            color: $dark;
+          }
+        }
+        .q-btn-dropdown__arrow {
+          display: none;
+        }
+      }
+      .q-header-info__balance {
+        .q-icon {
+          color: $grey-2;
+        }
+        .q-item__label {
+          margin-left: 17px;
+          color: $dark;
+          font-size: 14px;
+        }
+      }
+      .q-header-info__notification {
+        position: relative;
+        .q-icon {
+          color: $grey-2;
+        }
+
+        .q-header-info__notification-count {
+          position: absolute;
+          top: 5px;
+          left: 36px;
+          padding: 3px;
+          font-size: 14px;
+          line-height: 14px;
+          background-color: #d8dbe1;
+          border-radius: 4px;
+
+          &.red {
+            background-color: $negative;
+          }
+        }
+      }
+      .q-header-info__dropdawn {
+        min-height: 44px;
+        .q-btn-dropdown__arrow {
+          color: $primary;
+          margin-left: 20px;
+          font-size: 20px;
+        }
+        .block {
+          font-size: 14px;
+          text-transform: capitalize;
+        }
+        .on-left {
+          color: $grey-2;
+          margin-right: 17px;
+        }
+        &:hover {
+          .q-btn-dropdown__arrow {
+            color: $primary;
+          }
+        }
+      }
+    }
+    @media (min-width: 772px) and (max-width: 1100px) {
+      .q-toolbar {
+        padding-left: 6px;
+        padding-right: 0;
+      }
+      .q-header-info {
+        .q-header-info__manager {
+          margin-right: 14px;
+          .q-item__label {
+            span {
+              display: none;
+            }
+          }
+        }
+        .q-header-info__balance {
+          padding-right: 0;
+        }
+        .q-header-info__dropdawn {
+          .on-left {
+            margin-right: 0;
+          }
+          .block {
+            width: 0;
+            overflow: hidden;
+          }
+        }
+      }
+    }
+  }
+  .q-page-container {
+    padding-left: $layoutsize;
+    padding-top: 0 !important;
+  }
+  .q-drawer--left {
+    width: $layoutsize;
+    position: fixed;
+  }
+  .q-header .q-layout__shadow {
+    bottom: -24px;
+  }
+  .q-header .q-layout__shadow:after {
+    bottom: 24px;
+  }
+
+  .q-layout__shadow:after {
+    box-shadow: 0px 0px 24px rgba(18, 40, 76, 0.08);
+  }
+  .q-drawer--left .q-layout__shadow {
+    left: 24px;
+    right: -24px;
+  }
+  .q-drawer--left .q-layout__shadow:after {
+    right: 24px;
+  }
+
+  // s
+  .q-item__label--header {
+    padding-top: 12px;
+    margin-bottom: 44px;
+    padding-left: 32.67px;
+    @media (max-width: 772px) {
+      display: none;
+    }
+  }
+
+  // sidebar
+  .q-drawer-main {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    @media (max-width: 772px) {
+      padding-top: 80px;
+    }
+    hr {
+      width: calc(100% - 32px);
+      border: 1px solid $border-gray;
+      display: none;
+      @media (max-width: 772px) {
+        display: block;
+      }
+    }
+    .q-drawer-main__manager {
+      margin-bottom: 7px;
+    }
+    .q-drawer-main__manager {
+      margin-top: 6px;
+    }
+    .q-drawer-main__manager,
+    .q-drawer-main__balance {
+      display: none;
+      @media (max-width: 772px) {
+        display: flex;
+      }
+      .q-btn__content {
+        justify-content: flex-start;
+      }
+      .q-item__label,
+      .block {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        color: $grey;
+      }
+      .q-icon {
+        color: $grey;
+        margin-right: 16px;
+      }
+    }
+
+
+    .q-drawer-main-links {
+      .logo-mob {
+        display: none;
+      }
+      .q-item {
+        width: 100%;
+        text-align: left;
+        justify-content: flex-start;
+        align-items: center;
+        min-height: 64px;
+        padding-left: 32.2px;
+        .q-icon {
+          margin-right: 3px;
+          font-size: 16px;
+        }
+        .q-icon,
+        .q-toolbar__title {
+          color: $grey;
+          transition: all 0.3s;
+        }
+        .q-toolbar__title  {
+          font-family: "Montserrat", "Arial", "sans-serif";
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 20px;
+          text-transform: capitalize;
+          color: #596982;
+        }
+        &:hover {
+          .q-icon,
+          .q-toolbar__title {
+            color: $primary;
+          }
+        }
+      }
+      .q-router-link--exact-active{
+        border-right: 3px solid $primary;
+        .q-icon,
+        .q-toolbar__title {
+          color: $primary;
+        }
+      }
+    }
+    .q-drawer-main-social {
+      padding-bottom: 20px;
+      display: flex;
+      justify-content: center;
+      margin-top: auto;
+      .q-item__label {
+        display: none;
+      }
+      .q-item {
+        padding: 0 10px;
+        .q-icon {
+          color: $grey;
+          width: 18px;
+        }
+      }
+      .q-focus-helper {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 1500px) {
+  .main-layout {
+    .q-header {
+      left: $layoutsize2;
+    }
+    .q-page-container {
+      padding-left: $layoutsize2;
+    }
+    .q-drawer--left {
+      width: $layoutsize2;
+    }
+
+    .q-drawer-main {
+      .q-drawer-main-links {
+        padding-top: 12px;
+        .logo-mob {
+          display: flex;
+        }
+        .logo {
+          display: none;
+        }
+        .q-item {
+          min-height: 54px;
+          padding: 0;
+          padding-left: 26px;
+          .q-toolbar__title {
+            display: none;
+          }
+          .q-icon {
+            font-size: 24px;
+            margin-right: 0;
+            svg {
+              width: 24px;
+            }
+          }
+        }
+      }
+      .q-drawer-main-social {
+        padding-bottom: 7px;
+        flex-direction: column;
+        align-items: center;
+        .q-item {
+          margin-bottom: 37px;
+          .q-icon {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 772px) {
+  .main-layout {
+    padding-top: 64px;
+    .q-header {
+      left: $layoutsize3;
+      padding: 0 16px;
+      padding-right: 0;
+      height: 64px;
+      z-index: 3001;
+      position: fixed;
+      .logo {
+        display: block;
+        max-width: 96px;
+      }
+      .q-toolbar {
+        display: none;
+      }
+      .q-header-info {
+        margin-left: auto;
+        .q-header-info__manager,
+        .q-header-info__balance {
+          display: none;
+        }
+        .q-item {
+          padding-right: 0;
+          .q-btn {
+            .on-left {
+              margin-right: 0;
+              font-size: 22px;
+            }
+            .q-btn-dropdown__arrow {
+              width: 10px;
+              margin-left: 16px;
+            }
+            .block {
+              width: 0;
+              overflow: hidden;
+            }
+          }
+        }
+      }
+    }
+    .q-page-container {
+      padding-left: $layoutsize3;
+    }
+    .q-drawer--left {
+      width: 100% !important;
+    }
+
+    .q-drawer-main {
+      .q-drawer-main-links {
+        padding-top: 0;
+        .q-item {
+          padding-left: 16px;
+          min-height: 44px;
+          .q-icon {
+            margin-right: 3px;
+            font-size: 16px;
+          }
+          .q-toolbar__title {
+            display: block;
+          }
+        }
+
+        .logo-mob,
+        .logo {
+          display: none;
+        }
+      }
+      .q-drawer-main-social {
+        padding-bottom: 7px;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 24px;
+        .q-item {
+          margin-bottom: 6px;
+          align-items: center;
+          .q-icon {
+            color: #8893A5;
+          }
+          .q-item__label {
+            display: block;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 17px;
+            color: #8893A5;
+            margin-left: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.absolute-bottom {
+  position: fixed;
+  display: none;
+  background-color: #fff;
+  z-index: 3000;
+  @media (max-width: 772px) {
+    display: block;
+  }
+  .q-list {
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0px 0px 32px rgba(18, 40, 76, 0.08);
+    padding: 12px 29px;
+
+    .q-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+
+      & + .q-item {
+        margin: 0px 0px 0px 33px;
+      }
+
+      svg {
+        path {
+          fill: #596982;
+        }
+      }
+
+      &.q-router-link--exact-active,
+      .q-router-link--active {
+        .q-icon {
+          color: $primary !important;
+          svg {
+            path {
+              fill: $primary;
+            }
+          }
+        }
+
+        .text {
+          color: $primary;
+        }
+      }
+
+      .q-item__section {
+        margin-bottom: -5px;
+        font-size: 12px;
+        line-height: 13px;
+        width: auto;
+        color: #596982;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .q-icon {
+          margin: 0;
+        }
+        .text {
+          margin-top: 4px;
+        }
+        &--avatar {
+          min-width: 0 !important;
+        }
+
+        &--side {
+          padding: 0;
+        }
+
+        & + .q-item__section {
+          margin: 0;
+        }
+      }
+    }
+
+    .menu-icon {
+      .text {
+        color: #596982;
+      }
+      svg {
+        rect {
+          fill: #596982;
+        }
+      }
+
+      &.active {
+        svg {
+          rect, path {
+            fill: #4690ff;
+          }
+        }
+
+        .text {
+          color: #4690ff;
+        }
+      }
+    }
+  }
+}
+
+// модалка кнопки менеджера в мобильном меню
+.q-drawer-main__manager__inside {
+  padding: 16px;
+  .title,
+  ul li,
+  .link {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+  }
+  .title {
+    color: #8893A5;
+    color: $dark;
+  }
+  .link {
+    text-decoration: underline;
+    color: $primary;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

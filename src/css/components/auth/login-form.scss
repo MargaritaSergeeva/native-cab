@@ -1,0 +1,13 @@
+.login-form {
+  &__group {
+    .q-field__append {
+      height: 36px;
+      padding-right: 10px;
+    }
+  }
+
+  &__main-btn {
+    width: 100%;
+    margin-top: 26px;
+  }
+}
